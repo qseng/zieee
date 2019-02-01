@@ -1,59 +1,5 @@
 `timescale 1ns / 1ps
 
-// FILE HEADER--------------------------------------------------------------------------------
-
-// ZTE Copyright(c) ZTE owns the sole copyright to this software. Under
-// international copyright laws you (1) may not make a copy of this software
-// except for the purposes of maintaining a single archive copy, (2) may not
-// derive works herefrom, (3) may not distribute this work to others. These
-// rights are provided for information clarification, other restrictions of
-// rights may apply as well.
-//
-// ZTE Company Confidential
-// --------------------------------------------------------------------------------------
-// FILE NAME      :   vi_sync_gen
-// DEPARTMENT     :   Multimedia & Terminal Hardware Development Dept
-// AUTHOR         :   Forrest JIA
-// AUTHOR'S EMAIL :   jia.shaohua@zte.com.cn
-// -------------------------------------------------------------------------------------
-// REALEASE HISTORY
-//
-// VERSION        DATE           AUTHOR          DESCRIPTION
-//   1.0       11-12-2009        Forrest
-//
-//
-// -------------------------------------------------------------------------------------  
-// KEYWORDS       :
-// -------------------------------------------------------------------------------------
-// PURPOSE        :  Generate synchoronization signals,like v_sync and h_sync.
-//                   F = 0 for Field 1                             
-//                   F = 1 for Field 2                             
-//                   V = 1 during Vertical Blanking          
-//                   V = 0 when not in Vertical Blanking        
-//                   H = 0 at SAV                                                                       
-//                   H = 1 at EAV                                                                       
-//                   P3 = V XOR H      
-//                   P2 = F XOR H
-//                   P1 = F XOR V
-//                   P0 = F XOR V XOR H
-//
-// -------------------------------------------------------------------------------------
-// PARAMETERS    
-// 
-// PARAMETER NAME         RANGE            DESCRIPTION             DEFAULT         UNIT
-//
-// ------------------------------------------------------------------------------------
-// REUSE ISSUE      :
-// Reset Strategy   :
-// Clock Domain     :   vp_clk_in
-// Critical Timing  :
-// Test Features    :
-// Asynchoronous I/F:
-// Scan Methodology :
-// Instantiations   :
-// Synthezizable    :  
-// Others           :
-// END HEADER---------------------------------------------------------------------------------
 module vi_sync_gen_xy(
 					//           input           //
 					input 			sys_rst_n,         // reset
